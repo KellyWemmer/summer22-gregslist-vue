@@ -7,7 +7,7 @@ export class House {
         this.levels = levels || 0
         this.year = year || 0
         this.price = price || 0
-        this.img = img || ''
+        this.imgUrl = imgUrl || ''
         this.description = description || ''
     }
 

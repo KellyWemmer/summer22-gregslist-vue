@@ -4,7 +4,7 @@ import {House} from "../Models/House.js"
 
 class HousesService {
     async getHouses() {
-        let res = await server.get('/houses')
+        let res = await server.get('api/houses')
         AppState.houses = res.data.map(h => new House(h))
     }
 
@@ -27,14 +27,7 @@ class HousesService {
         AppState.house.splice(houseIndex, 1, house)
     }
 
-    // async getHouseById(houseId) {
-    //     const res = await server.get(`api/houses/${houseId}`)
-    //     AppState.activeHouse = new House(res.data)
-    // }
-
-    // setActiveHouse(house) {
-    //     AppState.activeHouse = house
-    // }
+    
 }
 
 export const housesService = new HousesService()
