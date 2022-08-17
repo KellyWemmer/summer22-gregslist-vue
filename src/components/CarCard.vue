@@ -3,6 +3,7 @@
     <router-link :to="{ name: 'Car', params: { carId: car.id } }">
       <img class="img-fluid" :src="car.img" alt="">
     </router-link>
+    <!-- commented out to just show picture on homepage -->
     <!-- <div class="p-2">
         <h4 class="text-center">{{ car.make }} | {{ car.model }} | {{ car.year }}</h4>
         <p>{{ car.description }}</p>
