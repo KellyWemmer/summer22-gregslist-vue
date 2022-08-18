@@ -24,8 +24,9 @@ import Pop from '../utils/Pop';
 
 export default {
     setup() {
+        logger.log("test")
         async function getHouses() {
-            try {
+            try {logger.log("getting houses")
                 await housesService.getHouses()
             }   catch (error) {
                 logger.error('[Getting Houses]', error)

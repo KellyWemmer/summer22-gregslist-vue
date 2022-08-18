@@ -1,10 +1,12 @@
 import { AppState } from "../AppState.js";
 import { server } from "./AxiosService.js";
-import {House} from "../Models/House.js"
+import { House } from "../models/House.js"
+import { logger } from "../utils/Logger.js";
 
 class HousesService {
     async getHouses() {
         let res = await server.get('api/houses')
+        logger.log("Got these houses?", res.data)
         AppState.houses = res.data.map(h => new House(h))
     }
 
